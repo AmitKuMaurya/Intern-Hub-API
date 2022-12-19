@@ -28,6 +28,8 @@ app.use("/company",companyController);
 app.use("/internships",userInternshipRouter);
 // Authorization(["company"])
 // CompanyAuth,Authorization(["company"]),
+
+
 app.use("/profile-details",profileRouter);
 app.use("/internship",CompanyAuth,Authorization(["company"]),internShipRouter);
 
