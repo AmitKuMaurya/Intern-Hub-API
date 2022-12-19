@@ -19,7 +19,7 @@ profileRouter.post("/create", async (req, res) => {
     try{
         const new_note = new CompanyProfileModel({company_logo,company_name,website,industry,about_comapny,address,city,pincode,company_size,userID})
         await new_note.save()
-        res.send({msg : "Note created successfully"})
+        res.send(new_note);
     }
     catch(err){
         console.log(err)
